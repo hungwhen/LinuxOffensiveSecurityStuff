@@ -1,6 +1,6 @@
 #!/bin/sh
-# enum_no_sudo_stdout.sh - Non-privileged Linux enumeration (prints to stdout only)
-# Usage: ./enum_no_sudo_stdout.sh [--fast] [-h|--help]
+# privescpaths.sh - Non-privileged Linux enumeration (prints to stdout only)
+# Usage: ./privescpaths.sh [--fast] [-h|--help]
 # Defensive, read-only enumeration. POSIX sh compatible.
 
 FAST=0
